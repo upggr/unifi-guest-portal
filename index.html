@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Free Wifi Sign In</title>
+
+	<!-- Google Fonts
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900" rel="stylesheet" type="text/css">
+ -->
+ <link href="style.css" rel="stylesheet" type="text/css">
+
+
+	<script src="jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">companyname</span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>
+				<fieldset class="large-text">
+					<p class="form-element">
+						<label for="Password" class="fieldname">Guest Password</label>
+						<input id="Password" name="password" type="password" class="textInput" value="" autocomplete="off" />
+					</p>
+				</fieldset>
+				<div class="form-controls">
+					<input name="connect" type="submit" value="Connect" id="connect" />
+				</div>
+
+			<br/>
+		</div>
+	</div>
+
+    <form id="target" method="POST" action="">
+							<input type="hidden" name="mode_login">
+							<input type="hidden" name="redirect" value="$redirect">
+							<input type="hidden" name="accept_terms" value="yes">
+						</form>
+
+
+						<script type="text/javascript">
+						jQuery(document).ready(function() {
+							jQuery('input').keypress(function(e) {
+								var code = (e.keyCode ? e.keyCode : e.which);
+								if ( (code==13) || (code==10)) {
+									jQuery(this).blur();
+									return false;
+								}
+							});
+						});
+
+
+						</script>
+
+</body>
+
+
+</html>
